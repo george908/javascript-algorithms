@@ -8,10 +8,10 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
-const SORTED_ARRAY_VISITING_COUNT = 60;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 60;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 60;
-const EQUAL_ARRAY_VISITING_COUNT = 60;
+const SORTED_ARRAY_VISITING_COUNT = 20;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 20;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 20;
+const EQUAL_ARRAY_VISITING_COUNT = 20;
 
 describe('CountingSort', () => {
   it('should sort array', () => {
@@ -35,9 +35,8 @@ describe('CountingSort', () => {
     const sortedArray = sorter.sort(notSortedArr, smallestElement, biggestElement);
 
     expect(sortedArray).toEqual(sortedArr);
-    // Normally visitingCallback is being called 60 times but in this case
-    // it should be called only 40 times.
-    expect(visitingCallback).toHaveBeenCalledTimes(40);
+    // it should be called only 20 times.
+    expect(visitingCallback).toHaveBeenCalledTimes(20);
   });
 
   it('should visit EQUAL array element specified number of times', () => {
